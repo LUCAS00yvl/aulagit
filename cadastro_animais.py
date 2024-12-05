@@ -1,1 +1,25 @@
-## PROGRAMA CADASTRO DE ANIMAIS 
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    def __init__(self, nome, idade, porte):
+        self.__nome=nome
+        self.__idade=idade
+        self.__porte=porte
+
+    def getNome(self):
+        return self.__nome
+    def getIdade(self):
+        return self.__idade
+    def setNome(self, nome):
+        self.__nome=nome
+    def setIdade(self, idade):
+        self.__idade=idade    
+    def getPorte(self):
+        return self.__porte  
+    def setPorte(self, porte):
+        self.__porte=porte
+
+
+
+    @abstractmethod
+    def mostrar(self):
+        pass    
